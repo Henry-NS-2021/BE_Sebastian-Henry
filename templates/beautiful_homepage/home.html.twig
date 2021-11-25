@@ -1,3 +1,245 @@
-<p>{{one[0]}}</p>
-<p>{{one[1]}}</p>
-<img style="width: 200px" src="{{one[2]}}" alt="{{one[1]}}">
+
+{% block body %}
+{# STYLE #}
+<style>
+{# header #}
+header {
+    height: 20vh;
+    background: url('https://cdn.pixabay.com/photo/2020/04/15/14/45/microphone-5046876_960_720.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+
+{# navbar #}
+ul{
+    display: flex;
+    margin: 0px;
+    background: black;
+    color: white;
+}
+
+li{
+    list-style-type: none;
+    padding: 0% 3%;
+}
+
+{# card #}
+.container{
+    position: relative;
+    margin: 2vw;
+    border: solid 1px black;
+    border-radius: 15px;
+    width: 30vw;
+}
+
+.image img{
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.text, p{
+    padding: 5% 2%;
+    text-align: center;
+}
+
+h1{
+    margin: 10px 0px 10px;
+}
+
+h3{
+    color: grey;
+    font-style: oblique;
+    font-weight: light;
+}
+
+{# general layout #}
+main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+</style>
+
+{# HERO #}
+{% block header %}
+<header>
+    {# <img src="" alt="hero"> #}
+</header>
+{% endblock %}
+
+{# NAVBAR #}
+{% block nav %}
+<nav>
+    <ul>
+        <li>Logo to insert</li>
+        <li>Home</li>
+        <li>About</li>
+    </ul>
+</nav>
+{% endblock %}
+
+{# MAIN #}
+{% block main %}
+
+{# loop test #}
+{# {{song1}}
+{{song2}} #}
+{# <ul>
+    {% for song in [1, 2,3,4,5] %}
+        <li>{{ song }}</li>
+    {% endfor %}
+</ul> #}
+{# FIND OBJECT in ARRAY OF OBJECTS #}
+<ul>
+    {% for song in songs %}
+        <li>{{ song.title }}</li>
+        <li>{{ song.image }}</li>
+        <li>{{ song.artist }}</li>
+    {% endfor %}
+</ul>
+{# end loop test #}
+
+<main>
+    <h1>Solution with arrays</h1><br>
+    <div class="container">
+        {# img #}
+        <div class="image">
+        <img src="{{one[2]}}" alt="{{one[1]}}">
+        </div>
+        {# text-field #}
+        <div class="text">
+            <h1>{{one[1]}}</h1>
+            <h3>"{{one[0]}}"</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        {# img #}
+        <div class="image">
+        <img src="{{two[2]}}" alt="{{two[1]}}">
+        </div>
+        {# text-field #}
+        <div class="text">
+            <h1>{{two[1]}}</h1>
+            <h3>"{{two[0]}}"</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        {# img #}
+        <div class="image">
+        <img src="{{three[2]}}" alt="{{three[1]}}">
+        </div>
+        {# text-field #}
+        <div class="text">
+            <h1>{{three[1]}}</h1>
+            <h3>"{{three[0]}}"</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        {# img #}
+        <div class="image">
+        <img src="{{four[2]}}" alt="{{four[1]}}">
+        </div>
+        {# text-field #}
+        <div class="text">
+            <h1>{{four[1]}}</h1>
+            <h3>"{{four[0]}}"</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        {# img #}
+        <div class="image">
+        <img src="{{five[2]}}" alt="{{five[1]}}">
+        </div>
+        {# text-field #}
+        <div class="text">
+            <h1>{{five[1]}}</h1>
+            <h3>"{{five[0]}}"</h3>
+        </div>
+    </div>
+
+
+    <h1>Solution with objects</h1>
+
+    <div class="container">
+        {# img #}
+        <div class="image">
+        <img src="{{song1.image}}" alt="{{song1.artist}}">
+        </div>
+        {# text-field #}
+        <div class="text">
+            <h1>{{song1.artist}}</h1>
+            <h3>"{{song1.title}}"</h3>
+        </div>
+    </div>
+    <div class="container">
+        {# img #}
+        <div class="image">
+        <img src="{{song2.image}}" alt="{{song2.artist}}">
+        </div>
+        {# text-field #}
+        <div class="text">
+            <h1>{{song2.artist}}</h1>
+            <h3>"{{song2.title}}"</h3>
+        </div>
+    </div>
+    <div class="container">
+        {# img #}
+        <div class="image">
+        <img src="{{song3.image}}" alt="{{song3.artist}}">
+        </div>
+        {# text-field #}
+        <div class="text">
+            <h1>{{song3.artist}}</h1>
+            <h3>"{{song3.title}}"</h3>
+        </div>
+    </div>
+    <div class="container">
+        {# img #}
+        <div class="image">
+        <img src="{{song4.image}}" alt="{{song4.artist}}">
+        </div>
+        {# text-field #}
+        <div class="text">
+            <h1>{{song4.artist}}</h1>
+            <h3>"{{song4.title}}"</h3>
+        </div>
+    </div>
+    <div class="container">
+        {# img #}
+        <div class="image">
+        <img src="{{song5.image}}" alt="{{song5.artist}}">
+        </div>
+        {# text-field #}
+        <div class="text">
+            <h1>{{song5.artist}}</h1>
+            <h3>"{{song5.title}}"</h3>
+        </div>
+    </div>
+
+    
+
+</main>
+{% endblock %}
+
+{# FOOTER #}
+{% block footer %}}
+<footer>
+<nav>
+    <ul>
+        <li>Logo to insert</li>
+        <li>Home</li>
+        <li>About</li>
+    </ul>
+</nav>
+<br>
+<p>2021 &copy; Seb & Gena</p>
+</footer>
+{% endblock %}
+
+
+{% endblock %}
