@@ -1,6 +1,109 @@
-h1{
-    color: red;
+/* {# header #} */
+header {
+    height: 20vh;
+    background: url('https://cdn.pixabay.com/photo/2020/04/15/14/45/microphone-5046876_960_720.jpg') no-repeat;
+    background-size: 100% 100%;
 }
+
+/* {# navbar #} */
+nav{
+    display: flex;
+    align-items: center;
+    background: khaki;
+}
+
+nav p{
+    vertical-align: middle;
+    text-align: center;
+    font-family: arial;
+    font-style: none;
+    margin: 2% 10%;
+}
+
+nav img{
+    width: 30px;
+    height: 30px;
+}
+
+footer nav{
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    margin: 0px;
+}
+
+li{
+    list-style-type: none;
+    padding: 0.5% 5%;
+    margin: 0ch 5ch;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 2ch;
+}
+
+/* {# card #} */
+.container{
+    position: relative;
+    margin: 2vw;
+    border: solid 1px black;
+    border-radius: 15px;
+    width: 15vw;
+
+}
+
+.image img{
+    width: 100%;
+    height: 150px;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.text{
+    padding:20px 10px;
+    text-align: center;
+}
+
 p{
-    color: red;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+h1{
+    color: white;
+    background: black;
+    margin: 5ch 0px 2ch;
+    text-align: center;
+    font-size: 3rem;
+}
+
+h4{
+    margin: 0;
+    color: grey;
+    font-style: oblique;
+    font-weight: light;
+}
+
+/* {# general layout #} */
+.solution{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* {# footer #} */
+footer{
+background: url("https://kriesi.at/themes/enfold-dj/wp-content/uploads/sites/74/2016/02/banner-dj-wide.jpg");
+}
+
+footer p{
+    margin: 2% 0%;
+    padding: 5%;
+    color: khaki;
+    text-align: center;
 }

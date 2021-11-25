@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class RandomNumberController extends AbstractController
 {
-    #[Route('/random', name: 'random_number')]
+    #[Route('/index', name: 'random_number')]
     public function index(): Response
     {
         return $this->render('random_number/index.html.twig', [
